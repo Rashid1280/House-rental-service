@@ -1,0 +1,101 @@
+<!-- properties.hbs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Properties</title>
+<style>
+/* styles.css */
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.properties-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.property {
+  width: 300px;
+  border: 1px solid #9edc92;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+    border-radius: 20px;
+
+}
+
+.property:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.property h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.property p {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.property-images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.property-images img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Custom Green and White Colors */
+
+body {
+  background-color: #f2f2f2;
+}
+
+
+
+</style></head>
+<body>
+  <h1>All Properties</h1>
+  <div class="properties-container">
+    {{#each properties}}
+    <div class="property">
+      <h2>{{propertyType}}</h2>
+      <p>{{description}}</p>
+      <p><b>Location: </b>{{location}}</p>
+      <p><b>Address: </b>{{address}}</p>
+      <p><b>Price: </b>{{price}}</p>
+      <p><b>Owner No:</b> {{ownerNo}}</p>
+      <div class="property-images">
+        {{#each images}}
+          <img src="{{this}}" alt="Property Image">
+        {{/each}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</body>
+</html>
+

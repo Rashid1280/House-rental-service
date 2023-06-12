@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Property</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2ecc71;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #f9f9f9;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #2ecc71;
+}
+
+textarea {
+  height: 100px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #27ae60;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: #3366cc;
+  box-shadow: 0 0 5px #2ecc71;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: fadeIn 0.5s;
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Add Property</h1>
+    <form id="addPropertyForm" action="/addProperty" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+  <label for="propertyType">Property Type:</label>
+  <select id="propertyType" name="propertyType" required class="form-group">
+    <option value="" selected disabled>Select Property Type</option>
+    <option value="1bhk">1 BHK</option>
+    <option value="2bhk">2 BHK</option>
+    <option value="3bhk">3 BHK</option>
+    {{!-- <option value="house">House</option>
+    <option value="flat">Flat</option> --}}
+    <option value="bunglow">Bungalow</option>
+    <option value="room">Room</option>
+  </select>
+</div>
+     
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
+
+<div class="form-group">
+  <label for="location">Location:</label>
+  <select id="location" name="location" required>
+    <option value="">Select a location</option>
+    <option value="raipur">Raipur</option>
+    <option value="durg">Durg</option>
+    <option value="bhilai">Bhilai</option>
+    <option value="bijapur">Bijapur</option>
+    <option value="abhanpur">Abhanpur</option>
+  </select>
+</div>
+
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required>
+      </div>
+      <div class="form-group">
+        <label for="ownerNo">Owner Contact Details:</label>
+        <input type="text" id="ownerNo" name="ownerNo" required>
+      </div>
+      <div class="form-group">
+        <label for="images">Upload Images:</label>
+        <input type="file" id="images" name="images" multiple required> 
+         {{!-- accept="image/*" multiple --}}
+      </div>
+      <button type="submit" class="btn">Add Property</button>
+    </form>
+  </div>
+</body>
+</html>

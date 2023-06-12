@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search Results</title>
+<style>
+    /* styles.css */
+body{
+    background-color: #00b289;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.property {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.property h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.property p {
+  margin: 5px 0;
+}
+
+.no-properties {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+
+/* Optional: Additional styles for list view */
+
+.property-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.property-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.property-type {
+  font-weight: bold;
+}
+
+.property-location {
+  color: #888;
+}
+
+</style></head>
+<body>
+  <div class="container">
+    <h1>Search Results</h1>
+
+    {{#if properties}}
+      {{#each properties}}
+        <div class="property">
+          <h2>{{this.propertyType}}</h2>
+          <p><b>Location:</b> {{this.location}}</p>
+           <p><b>Address:</b> {{this.address}}</p>
+
+          <p><b>Price:</b> {{this.price}}</p>
+          
+          <p><b>Description:</b> {{this.description}}</p>
+          <img src="{{this.images}}" alt="Property Image" height="300px">
+        </div>
+      {{/each}}
+    {{else}}
+      <p class="no-properties"><b>No properties found.</b></p>
+    {{/if}}
+  </div>
+</body>
+</html>

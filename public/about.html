@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT</title>
+<style>
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:#00b289;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #00b289;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+</style>
+</head>
+<body>
+    
+    <div class="about-section">
+        <h1>About Us Page</h1>
+        <p>Welcome to our house rental website! We are a group of three students who have come together to make this project a reality. Each of us has contributed in our own unique way to bring this website to life. Together, we have worked tirelessly to create a website that meets the needs of both property owners and renters. We are passionate about helping people find the perfect rental property and ensuring that landlords can easily connect with potential tenants If you have any questions or feedback, please don't hesitate to <a  href="/contact.html">contact us</a> us. We would love to hear from you and are always looking for ways to improve our website and better serve our customers..</p>
+
+      </div>
+      
+      <h2 style="text-align:center">Our Team</h2>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="container">
+              <h2>RASHID</h2>
+              <p>Responsible for designing and building the website's architecture. With their technical expertise, they have ensured that our website is fast, user-friendly, and easy to navigate.</p>
+              <p>md.rashid@ssipmt.com</p>
+              <p><button class="button"><b>Contact</b></button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <div class="container">
+              <h2>ANKIT</h2>
+              <p>Has created all the written content for our website, including property descriptions, rental agreements, and FAQs. With their attention to detail and creative flair, they have helped to make our website informative and engaging.</p>
+              <p>ankit.jindal@ssipmt.com</p>
+              <p><button class="button"><b>Contact</b></button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <div class="container">
+              <h2>VIPUL</h2>
+              <p>Has done nothing</p>
+              <p>vipul.mali@ssipmt.com</p>
+              <p><button class="button"><b>Contact</b></button></p>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+</body>
+</html>
